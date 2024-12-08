@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Horizons Travel Agency</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #e6f7ff, #fff9e6);
+    color: #333;
+  }
+  .header {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .logo {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  .tagline {
+    font-style: italic;
+  }
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .destination-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .destination-card:hover {
+    transform: translateY(-5px);
+  }
+  .destination-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .destination-info {
+    padding: 15px;
+  }
+  .world-map {
+    width: 100%;
+    height: 400px;
+    background-color: #e6f7ff;
+    margin-top: 30px;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+    margin-top: 30px;
+  }
+
+  /* CSS para la barra de búsqueda */
+  .search-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .search-container input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+  }
+
+  .search-container button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+
+  .search-container button:hover {
+    background-color: #e65c00;
+  }
+
+  #results-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .result-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+  }
+
+</style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Global Horizons</div>
+    <div class="tagline">Descubre el Mundo, Una Aventura a la Vez</div>
+  </header>
+  
+  <main class="content">
+    <h1>Bienvenido a Agencia de Viajes "Global Horizons"</h1>
+    <p>Embárquese en el viaje de su vida con Global Horizons. Nos especializamos en crear experiencias de viajes internacionales inolvidables adaptadas a sus sueños y deseos.</p>
+    
+    <div class="destination-grid">
+      <div class="destination-card">
+        <img src="https://lh6.googleusercontent.com/proxy/VSDBMeOlHFia1rVgjtrzdD42kC-HsycxOoAOJ_VCsdrf1eGyS8-438Q3d5ZNb2nr8rNFxLRn6010qqIibO88yCK8tSWGlI9c4nZ4SpC3OuHk_771MhIgkGMUPNdhXZ3ytMcfVc54246Fipdt8_4UvcyhIAcAkKg=w540-h312-n-k-no" alt="Eiffel Tower at sunset, romantic and iconic" class="destination-image">
+        <div class="destination-info">
+          <h3>París, Francia</h3>
+          <p>Vive la Ciudad de la Luz y el Amor.</p>
+        </div>
+      </div>
+      <div class="destination-card">
+        <img src="https://assets.vogue.com/photos/659db809e0e9934642099815/master/w_1920,c_limit/1189690204" alt="Busy Shibuya crossing in Tokyo at night, neon lights and crowds" class="destination-image">
+        <div class="destination-info">
+          <h3>Tokio, Japón</h3>
+          <p>Disfruta la mezcla de lo tradicional y lo tecnologico en un solo lugar .</p>
+        </div>
+      </div>
+      <div class="destination-card">
+        <img src="https://www.agoda.com/wp-content/uploads/2020/07/Statue-of-Liberty-things-to-do-in-new-york-USA.jpg" alt="New York City skyline with the Statue of Liberty" class="destination-image">
+        <div class="destination-info">
+          <h3>New York, USA</h3>
+          <p>Explora la ciudad que nunca duerme.</p>
+        </div>
+      </div>
+      <div class="destination-card">
+        <img src="https://www.universal-assistance.com/uablog/wp-content/uploads/2022/12/big-ben.png" alt="Big Ben and the River Thames in London" class="destination-image">
+        <div class="destination-info">
+          <h3>Londres, UK</h3>
+          <p>Descubre la historia y la modernidad enlazas en un destino único.</p>
+        </div>
+      </div>
+    </div>
+<!-- Título de la barra de búsqueda -->
+<h2>Planifica tus vacaciones, Revisa la disponibilidad de nuestras experiencias</h2>
+<!-- Barra de búsqueda -->
+<div class="search-container">
+    <input type="text" id="destination" placeholder="Destino">
+    <input type="date" id="travel-date">
+    <button id="search-btn">Buscar</button>
+</div>
+
+<div id="results-container">
+    <!-- Los resultados de la búsqueda se mostrarán aquí -->
+
+  <footer>
+    Realizado por Roberto Aliste, Programación Web 2, 2024
+  </footer>
+
+  <!-- Scripts -->
+  <script src="busqueda.js"></script>
+
+</body>
+</html>
